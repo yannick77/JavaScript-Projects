@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #first, #second, #third{
+            margin: 0 10px;
+            padding:5px;
+            width: 200px;
+            float:left;
+
+            min-height: 200px;
+            text-align: center;
+            font-family: "Cooper Black";
+            font-size: 300%;
+        }
+
+        #first{
+            background-color: crimson ;
+
+        }
+        #second{
+            background-color: aquamarine;
+        }
+        #third{
+            background-color: darkslategray;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+
+            $(document).ready(function () {
+             /*   $("#a").appendTo("#second");
+                $("#b").appendTo("#third");
+                $("#c").appendTo("#first");
+
+                */
+
+
+                $("#overall").hover(function(){
+                        $("#a").appendTo("#second");
+                        $("#b").appendTo("#third");
+                        $("#c").appendTo("#first");
+                    },
+                    function(){
+                        $("#a").appendTo("#first");
+                        $("#b").appendTo("#second");
+                        $("#c").appendTo("#third");
+                    });
+
+            })
+
+    </script>
+
+    <title>JQuery Assignment</title>
+</head>
+<body>
+    <h1 align="center" >EDS Practical Assignment By Yannick Dongo 12ck013851 ICE 500lvl.</h1>
+    <p align="center" ><i><b>The Point of this App is to show jquery event triggers. The Divs will exchange data on Hover.</b></i></p>
+
+        <div id="overall">
+            <div id="first">
+                <p id="a">One</p>
+            </div>
+            <div id="second">
+                <p id="b">Two</p>
+            </div>
+            <div id="third">
+                <p id="c">Three</p>
+            </div>
+        </div>
+
+   <!-- <button onclick="exchange()"><b>Click Me!</b></button> >
+
+</body>
+</html>
