@@ -1,0 +1,50 @@
+<!--This App changes a text on Hover -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Text On Hover</title>
+
+    <style>
+        #main{
+            margin: auto;
+            padding:5px;
+            width: 400px;
+
+
+            min-height: 200px;
+            text-align: center;
+            font-family: "Cooper Black";
+            font-size: 300%;
+            background-color: chocolate;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#main").mousedown(function () {
+
+
+             $("#main").html("Now tell me that wasn't the bestest ever!").html().replace("cool","äwesome");
+
+            })
+
+            $("#main").mouseup(function () {
+                $("#main").html("Hover your mouse on me to see something Cool").html().replace("cool","äwesome");
+            })
+
+            }
+        )
+    </script>
+
+</head>
+<body>
+<h2 align="center"><i>This app Changes text on mousedown </i></h2>
+    <div id="main">
+        <p> Click on me to see something Cool</p>
+
+    </div>
+
+
+</body>
+</html>
